@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Aesthetic Bakery</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/adminPage']">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/listOrder']">Order</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/customer']">Customer</a>
+        </li>
+
+      </ul>
+      <form class="d-flex">
+        <button [routerLink]="['/home']" class="btn btn-secondary my-2 my-sm-0" >Log Out</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4" style="text-align: center;">
+  <h2>AESTHETIC BAKERY' CUSTOMER</h2>
+</div>
+
+<div class="container mt-5"  >
+  <a [routerLink]="['/createCustomer']" class="btn btn-secondary">+ Add New Customer</a>
+</div>
+  <!--to show success message-->
+<div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>{{successmsg}}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div class="container mt-4">
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr  style="text-align: center;">
+        <th scope="col">ID.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Password</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Edits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = 'let or of listcust'>
+        <th scope="row">{{or.id}}</th>
+        <td>{{or.custName}}</td>
+        <td>{{or.password}}</td>
+        <td>{{or.username}}</td>
+        <td>{{or.email}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteId(or.id)">Delete</button>
+&nbsp;
+          <a [routerLink]="['/createCustomer',or.id]" class="btn btn-primary">Edit</a>
+        </td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<footer>
+  Copyright © 2022 by Aesthetic Bakery Cakes & Café Sdn Bhd. All Rights Reserved.
+</footer>
+
+

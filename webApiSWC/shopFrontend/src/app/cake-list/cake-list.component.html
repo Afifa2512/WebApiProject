@@ -1,0 +1,142 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Aesthetic Bakery</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/custPage']">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/cakeList']">Cake</a>
+        </li>
+
+      </ul>
+      <form class="d-flex">
+        <button [routerLink]="['/home']" class="btn btn-secondary my-2 my-sm-0" >Log Out</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4" style="text-align: center;">
+  <h2>AESTHETIC BAKERY' CAKES</h2>
+</div>
+<div class="container mt-5">
+  <a [routerLink]="['/createOrder']" class="btn btn-secondary">Order Your Cake</a>
+</div>
+<div class="container mt-4">
+  <table class="table" >
+
+    <tr>
+      <td style="width: 33%; " >
+        <div class="container" style="display: flex; justify-content: center;">
+          <img src="./assets/image/banana.png" alt="Chocolate Banana Cake" style="width: 90%;">
+        </div>
+        <div class="container" style="display: flex; justify-content: center;">
+          <h4 style="text-align: center;"><strong>Chocolate Banana Cake</strong></h4><br><br><br>
+        </div>
+        <div>
+          <p style="text-align: justify;"><u><b>Product Details</b></u></p>
+          <p style="text-align: justify;"><b>Decscriptons: </b>Cocoa banana sponge layered with fresh caramelized banana slices and coated with dark chocolate.</p>
+          <p style="text-align: justify;"><b>Ingredients: </b>Cocoa Banana Sponge, Light Chocolate Cream Filling, Fresh Caramelized Banana, Dark Chocolate</p>
+          <p style="text-align: justify;"><b>Texture: </b>Creamy</p>
+          <p style="text-align: justify;"><b>Price: </b>RM20.00</p>
+          <p></p>
+        </div>
+      </td>
+      <td style="width: 33%; " >
+        <div class="container" style="display: flex; justify-content: center;">
+          <img src="./assets/image/whitecoko.png" alt="White Choc Macadamia Cake" style="width: 90%;">
+        </div>
+        <div class="container" style="display: flex; justify-content: center;">
+          <h4 style="text-align: center;"><strong>White Choc Macadamia Cake</strong></h4><br><br>
+        </div>
+        <div>
+          <p style="text-align: justify;"><u><b>Product Details</b></u></p>
+          <p style="text-align: justify;"><b>Decscriptons: </b>Vanilla sponge with layers of macadamia nuts in vanilla cream, coated with white chocolate.</p>
+          <p style="text-align: justify;"><b>Ingredients: </b>Flour, Eggs, Sugar, Soy Bean Oil, Vanilla, Roasted Macadamia Nuts, White Chocolate</p>
+          <p style="text-align: justify;"><b>Texture: </b>Creamy</p>
+          <p style="text-align: justify;"><b>Price: </b>RM22.00</p>
+        </div>
+      </td>
+
+      <td style="width: 33%; " >
+        <div class="container" style="display: flex; justify-content: center;">
+          <img src="./assets/image/butterfly.png" alt="Butterfly Pea Lemon Cheesecake" style="width: 90%;">
+        </div>
+        <div class="container" style="display: flex; justify-content: center;">
+          <h4 style="text-align: center;"><strong>Butterfly Pea Lemon Cheesecake</strong></h4><br><br>
+        </div>
+        <div>
+          <p style="text-align: justify;"><u><b>Product Details</b></u></p>
+          <p style="text-align: justify;"><b>Decscriptons: </b>Chilled Australian cream cheese infused with candied lemon zest and butterfly blue pea flower.</p>
+          <p style="text-align: justify;"><b>Ingredients: </b>Flour, Eggs, Sugar, Cream Cheese, Gelatin, Cream, Lemon, Biscuits, Butterfly Pea Flower</p>
+          <p style="text-align: justify;"><b>Texture: </b>Cheesy</p>
+          <p style="text-align: justify;"><b>Price: </b>RM25.00</p>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="width: 33%; " >
+        <div class="container" style="display: flex; justify-content: center;">
+          <img src="./assets/image/cheesecake.png" alt="Crème Brulée Cheesecake" style="width: 90%;">
+        </div>
+        <div class="container" style="display: flex; justify-content: center;">
+          <h4 style="text-align: center;"><strong>Crème Brulée Cheesecake</strong></h4><br><br>
+        </div>
+        <div>
+          <p style="text-align: justify;"><u><b>Product Details</b></u></p>
+          <p style="text-align: justify;"><b>Decscriptons: </b>Chilled Vanilla and Australian cream cheese topped with caramelized Crème Brulée glaze.</p>
+          <p style="text-align: justify;"><b>Ingredients: </b>Biscuit, Butter, Vanilla, Milk, French Cream, Eggs, Cream Cheese</p>
+          <p style="text-align: justify;"><b>Texture: </b>Cheesy</p>
+          <p style="text-align: justify;"><b>Price: </b>RM25.00</p>
+        </div>
+      </td>
+      <td style="width: 33%; " >
+        <div class="container" style="display: flex; justify-content: center;">
+          <img src="./assets/image/oreo.png" alt="Oreo Cheesecake" style="width: 90%;">
+        </div>
+        <div class="container" style="display: flex; justify-content: center;">
+          <h4 style="text-align: center;"><strong>Oreo Cheesecake</strong></h4><br><br>
+        </div>
+        <div>
+          <p style="text-align: justify;"><u><b>Product Details</b></u></p>
+          <p style="text-align: justify;"><b>Decscriptons: </b>Chilled cream cheese loaded with Oreo biscuits over an Oreo base.</p>
+          <p style="text-align: justify;"><b>Ingredients: </b>Cream Cheese, Cream, Sugar, Oreo Biscuits</p>
+          <p style="text-align: justify;"><b>Texture: </b>Cheesy</p>
+          <p style="text-align: justify;"><b>Price: </b>RM25.00</p>
+        </div>
+        <br>
+      </td>
+
+      <td style="width: 33%; " >
+        <div class="container" style="display: flex; justify-content: center;">
+          <img src="./assets/image/wildeberries.png" alt="Wild Blueberry Cheesecake" style="width: 90%;">
+        </div>
+        <div class="container" style="display: flex; justify-content: center;">
+          <h4 style="text-align: center;"><strong>Wild Blueberry Cheesecake</strong></h4><br><br>
+        </div>
+        <div>
+          <p style="text-align: justify;"><u><b>Product Details</b></u></p>
+          <p style="text-align: justify;"><b>Decscriptons: </b>Smooth baked cheese topped with blueberries from Canada.</p>
+          <p style="text-align: justify;"><b>Ingredients: </b>Flour, Butter, Cream Cheese, Sugar, Cheese, Cream, Blueberries, Eggs</p>
+          <p style="text-align: justify;"><b>Texture: </b>Cheesy</p>
+          <p style="text-align: justify;"><b>Price: </b>RM25.00</p>
+        </div>
+        <br>
+      </td>
+    </tr>
+  </table>
+</div>
+<footer>
+  Copyright © 2022 by Aesthetic Bakery Cakes & Café Sdn Bhd. All Rights Reserved.
+</footer>

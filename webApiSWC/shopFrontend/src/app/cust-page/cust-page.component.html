@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Aesthetic Bakery</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/home']">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/cakeList']">Cake</a>
+        </li>
+
+      </ul>
+      <form class="d-flex">
+        <button [routerLink]="['/home']" class="btn btn-secondary my-2 my-sm-0" >Log Out</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div>
+  <div >
+      <img src="./assets/image/homebanner1.jpg" style="width:100%; ">
+    </div>
+  <div class="card text-white mb-3" style="max-width: 100rem; background-color: #f29699;">
+    <div class="card-header">Hello</div>
+    <div class="card-body">
+      <h1 class="card-title">Welcome Back!!</h1>
+    </div>
+    <footer>
+      Copyright © 2022 by Aesthetic Bakery Cakes & Café Sdn Bhd. All Rights Reserved.
+    </footer>
+
+  </div>
+
+</div>

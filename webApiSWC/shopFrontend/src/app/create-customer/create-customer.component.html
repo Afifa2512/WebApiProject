@@ -1,0 +1,50 @@
+<div class="container mt-5" >
+  <h1>AESTHETIC BAKERY' CUSTOMER</h1>
+  <br>
+  <a [routerLink]="['/customer']" class="btn btn-secondary">Customer Lists</a>
+
+<br><br>
+
+<!--to show error message-->
+<div *ngIf="errormsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{errormsg}}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!--to show sucsess message-->
+<div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>{{successmsg}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<form [formGroup]="custForm">
+  <div class="col-lg-4 mt-2">
+    <label for="custName" class="col-lg-4 control-label"><b>Name: </b></label>
+    <input type="text" class="form-control" formControlName="custName" placeholder="Enter Customer Name">
+  </div>
+
+  <div class="col-lg-4 mt-2">
+    <label for="password" class="col-lg-4 control-label"><b>Password: </b></label>
+    <input type="text" class="form-control" formControlName="password" placeholder="Enter password">
+
+  </div>
+
+  <div class="col-lg-4 mt-2">
+    <label for="username" class="col-lg-4 control-label"><b>Username: </b></label>
+    <input type="text" class="form-control" formControlName="username" placeholder="Enter Customer username">
+  </div>
+
+  <div class="col-lg-4 mt-2">
+    <label for="email" class="col-lg-4 control-label"><b>Email: </b></label>
+    <input type="text" class="form-control" formControlName="email" placeholder="Enter Customer email">
+  </div>
+
+  <div class="col-lg-4 mt-2" *ngIf="!getparamId" (click)="custSubmit()">
+    <button class="btn btn-primary">Add</button>
+  </div>
+  <div class="col-lg-4 mt-2" *ngIf="getparamId" (click)="custUpdate()" >
+    <button class="btn btn-info">Edit</button>
+  </div>
+</form>
+
+</div>

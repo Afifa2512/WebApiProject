@@ -1,0 +1,67 @@
+<div class="container mt-5" >
+  <h1>ASTHETIC BAKERY' ORDER</h1>
+  <br>
+  <!--<a [routerLink]="['/listOrder']" class="btn btn-secondary">Order Lists</a>-->
+
+
+
+<!--to show error message-->
+<div *ngIf="errormsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{errormsg}}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!--to show success message-->
+<div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>{{successmsg}}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div>
+
+  <h4>Create Order</h4>
+  <form [formGroup]="orderForm">
+
+    <div class="col-lg-4 mt-2">
+      <label for="customerName" class="col-lg-4 control-label"><b>Name: </b></label>
+      <input type="text" class="form-control" formControlName="customerName" placeholder="Enter Customer Name">
+    </div>
+
+    <div class="col-lg-4 mt-2">
+      <label for="orderCakeName" class="col-lg-4 control-label"><b>Order: </b></label>
+      <select id="cakes" class="form-control" formControlName="orderCakeName" placeholder="Enter Order">
+        <option value="Chocolate Banana Cake">Chocolate Banana Cake</option>
+        <option value="White Choc Macadamia Cake">White Choc Macadamia Cake</option>
+        <option value="Butterfly Pea Lemon Cheesecake">Butterfly Pea Lemon Cheesecake</option>
+        <option value="Crème Brulée Cheesecake">Crème Brulée Cheesecake</option>
+        <option value="Wild Blueberry Cheesecake">Wild Blueberry Cheesecake</option>
+        <option value="Oreo Cheesecake">Oreo Cheesecake</option>
+      </select>
+    </div>
+
+    <div class="col-lg-4 mt-2">
+      <label for="orderDate" class="col-lg-4 control-label"><b>Order Date: </b></label>
+      <input type="date" class="form-control" formControlName="orderDate" placeholder="Enter Order Date">
+    </div>
+
+    <div class="col-lg-4 mt-2">
+      <label for="finishDate" class="col-lg-4 control-label"><b>Delivery Date: </b></label>
+      <input type="date" class="form-control" formControlName="finishDate" placeholder="Enter Delivery Date">
+    </div>
+
+    <div class="col-lg-4 mt-2">
+      <label for="total" class="col-lg-4 control-label"><b>Total: </b></label>
+      <input type="text" class="form-control" formControlName="total" placeholder="Enter Total">
+    </div>
+
+    <div class="col-lg-4 mt-2" *ngIf="!getparamid" (click)="orderSubmit()">
+      <button class="btn btn-primary">Order</button>
+    </div>
+
+    <div class="col-lg-4 mt-2" *ngIf="getparamid" (click)="orderUpdate()">
+      <button class="btn btn-info">Edit</button>
+    </div>
+
+  </form>
+</div>
+</div>

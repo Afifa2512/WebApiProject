@@ -1,0 +1,8 @@
+@import url(https://bootswatch.com/5/minty/bootstrap.min.css);
+
+footer {
+  text-align: center;
+  padding: 40px;
+  background-color: #78c1ae;
+  color: white;
+}
